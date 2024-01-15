@@ -1,0 +1,50 @@
+Array indexing involves
+ Multiplying index by element size
+ Adding to array base address
+ Pointers correspond directly to memory
+addresses
+ Can avoid indexing complexity
+
+ Byte-encoded character sets
+ ASCII: 128 characters
+ 95 graphic, 33 control
+ Latin-1: 256 characters
+ ASCII, +96 more graphic characters
+
+Memory Layout:
+Text: program code
+ Static data: global
+variables
+ e.g., static variables in C,
+constant arrays and strings
+ x3 (global pointer)
+initialized to address
+allowing ±offsets into this
+segment
+ Dynamic data: heap
+ E.g., malloc in C, new in
+Java
+ Stack: automatic storage
+
+
+Procedures - 
+Steps required
+1. Place parameters in registers x10 to x17
+2. Transfer control to procedure
+3. Acquire storage for procedure
+4. Perform procedure’s operations
+5. Place result in register for caller
+6. Return to place of call (address in x1)
+Non - leaf:
+Procedures that call other procedures
+ For nested call, caller needs to save on the
+stack:
+ Its return address
+ Any arguments and temporaries needed after
+the call
+ Restore from the stack after the call
+
+
+RISC-V is Little Endian
+ Least-significant byte at least address of a word
+ c.f. Big Endian: most-significant byte at least address
